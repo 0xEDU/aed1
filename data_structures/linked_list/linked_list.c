@@ -54,3 +54,17 @@ node *create_node(int data) {
 	new_node->next = NULL;
 	return new_node;
 }
+
+void reverse_singly_linked_list(singly_linked_list **list) {
+	node *temp_head = (*list)->head;
+	node *prev = NULL;
+	node *next = NULL;
+
+	while (temp_head) {
+		next = temp_head->next;
+		temp_head->next = prev;
+		prev = temp_head;
+		temp_head = next;
+	}
+	(*list)->head = prev;
+}

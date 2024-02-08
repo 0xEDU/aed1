@@ -20,4 +20,5 @@ void				print_singly_linked_list(singly_linked_list *list);
 node				*get_last_singly_linked_list(singly_linked_list *list);
 void				add_node_to_sl_list(node *new_node, singly_linked_list **list);
 node				*create_node(int data);
+void				reverse_singly_linked_list(singly_linked_list **list);
 #endif // !LINKED_LIST_H
